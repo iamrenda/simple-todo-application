@@ -3,24 +3,19 @@
  * title: やることのタイトル
  * isDone: 達成状況　trueになると、チェックが着く
  */
-let tasks = [
-    { title: "お洗濯", isDone: false },
-]
+let tasks = [{ title: "お洗濯", isDone: false }];
 
 /**
  * [学生1]
  * 引数で与えられるタイトルで「やること」が作成されるように修正してください。
- * 
+ *
  * 注) 登録ボタンを押したときに、この関数が呼ばれる処理は既に書かれています。
- * 
+ *
  */
 function addTask(title) {
-    const task = { isDone: false }
+    const task = { title, isDone: false };
 
-    // やることのタイトルを設定(このままだと、すべてのタイトルがHello Worldになってしまう！)
-    task.title = "Hello World"
-
-    // 以降は無視して良い
+    // 以降は無視して良い   
     tasks.push(task);
     drawTask(task, tasks.length - 1);
 }
@@ -30,9 +25,9 @@ function addTask(title) {
  * 「チェックボックス」をクリックしたときに、
  * 引数で与えられる「やること」の達成状態(isDone)を、
  * 現在の状態と反対になるように更新してください。
- * 
+ *
  * 注) クリックしたときに、この関数が呼ばれる処理は既に書かれています。
- * 
+ *
  * 例:
  * before   |   after
  * --------------------
@@ -54,9 +49,9 @@ function onUpdateIsDone(task) {
  * 「タスクのタイトル」をクリックしたときに、
  * 引数で与えられる「やること」の達成状態(isDone)を、
  * 現在の状態と反対になるように更新してください。
- * 
+ *
  * 注) クリックしたときに、この関数が呼ばれる処理は既に書かれています。
- * 
+ *
  * 例:
  * before   |   after
  * --------------------
